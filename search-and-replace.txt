@@ -1,0 +1,30 @@
+function myReplace(str, before, after) {
+  let stringReplace = str.split(" ");
+
+  function wordCapped(word){
+    console.log(word[0] === word[0].toUpperCase());
+    return word[0] === word[0].toUpperCase();
+    
+  }
+
+  for(let i=0; i<stringReplace.length; i += 1) {
+    let indWord = stringReplace[i];
+    //identifies the position, conditional statement 
+    if(indWord === before){
+      if(wordCapped(indWord)){
+        after = after[0].toUpperCase() + after.slice(1);
+       console.log(after);
+       } else{
+         after = after[0].toLowerCase() + after.slice(1);
+       };
+        stringReplace[i] = after;
+      }
+      
+
+    }
+  
+  return stringReplace.join(" ");
+}
+let result = myReplace("I think we should look up there", "up", "Down");
+
+console.log(result);
