@@ -1,0 +1,35 @@
+function pairElement(initialElement) {
+  function dnaStrand(initial) {
+    if (initial === "A") {
+      return "T";
+    }else if(initial === "T"){
+    return "A";
+  }else if (initial === "C"){
+    return "G";
+  }else if (initial === "G"){
+    return "C";
+
+  }
+}
+  //let atStr = "T";
+  //let taStr = "A";
+  //let cgStr = "C";
+  //let gcStr = "G";
+
+  //let atRegex = /[A]T/;
+  //let taRegex = /[T]A/;
+  //let cgRegex = /[C]G/;
+  //let gcRegex = /[G]C/;
+  
+  
+  //return atStr;
+  //return taStr;
+  //return cgStr;
+  return initialElement.split("").map(initialPair => {
+  let dnaPair = [initialPair, dnaStrand(initialPair)];
+  return dnaPair
+  });
+}
+
+let result = pairElement("ATCGA");
+console.log(result);
