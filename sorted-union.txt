@@ -1,0 +1,7 @@
+function uniteUnique(arr) {
+   let finalCollect = Array.from(arguments);
+  return finalCollect.reduce((arr, a) => {
+    a.forEach(n => (!arr.includes(n) ? arr.push(n) : n));
+    return arr
+  },[]);
+}
