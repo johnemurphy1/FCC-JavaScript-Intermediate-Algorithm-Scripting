@@ -13,7 +13,7 @@ function sumFibs(num) {
  }
  return sumOddNum + 1;
  }
-  
+  //The below partially worked(source: StackOverflow) 
   /*let currNum = [0,1];
   for (let i = 2; i < num; i++){
     let numNext = currNum[i-1] + currNum[i-2];
