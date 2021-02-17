@@ -1,0 +1,29 @@
+function sumFibs(num) {
+   let begNum = 0;
+ let nextNum = 1;
+ let currentNum;
+ let sumOddNum = 0;
+ for (let i = 0; i <= num; i++){
+ currentNum = begNum + nextNum;
+ begNum = nextNum;
+ nextNum = currentNum;
+ if (currentNum % 2 !== 0 && currentNum <= num){
+ sumOddNum = currentNum + sumOddNum; 
+ }
+ }
+ return sumOddNum + 1;
+ }
+  
+  /*let currNum = [0,1];
+  for (let i = 2; i < num; i++){
+    let numNext = currNum[i-1] + currNum[i-2];
+    let fibNum = currNum.push(numNext); 
+}
+ return currNum.filter(a => a%2 && a < num).reduce((a, z)  => a + z)
+ 
+ }
+ */
+   
+ 
+
+sumFibs(4);
