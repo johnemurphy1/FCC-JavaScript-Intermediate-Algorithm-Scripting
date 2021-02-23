@@ -1,0 +1,26 @@
+function sumPrimes(num) {
+  let count = 2;
+  let sum = 0;
+  while (count <= num){
+    if (isPrim(count)){
+      sum += count;
+    }
+    count +=1;
+  }
+    return sum;  
+  }
+
+function isPrim(oneNum){
+  let counter = 2;
+  while (counter < oneNum){
+    if (oneNum % counter === 0)
+    {
+      return false;
+    }
+    counter +=1;
+  }
+return true;
+}
+
+let result = sumPrimes(10);
+console.log(result);
