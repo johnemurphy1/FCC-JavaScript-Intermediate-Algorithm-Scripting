@@ -1,7 +1,11 @@
 function smallestCommons(arr) {
-  arr.sort((a,b)=>a>b?1:-1)
+ //sort array
+ arr.sort((a,b)=>a>b?1:-1)
+  //cache numbers in variables
   let[div,num] = arr
+  //create while loop
   while(div<arr[1]){
+    //creat if else statement
     if(num%div === 0){
       div++
     }else{
