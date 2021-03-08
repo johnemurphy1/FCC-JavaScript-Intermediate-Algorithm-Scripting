@@ -1,0 +1,6 @@
+function dropElements(arr,func,i=0){
+ return i < arr.length && !func(arr[i])
+  ? (dropElements(arr.shift(i+1),func,i))
+   :arr;
+   }
+   //above uses recursion to solve challenge
