@@ -1,6 +1,15 @@
 function dropElements(arr,func,i=0){
- return i < arr.length && !func(arr[i])
-  ? (dropElements(arr.shift(i+1),func,i))
-   :arr;
-   }
+ while(!func(arr[0])){
+   arr.shift();
+ }
+ return arr;
+}
+dropElements([1, 2, 3], function(n) {return n < 3; });
+
+//function dropElements(arr,func,i=0){
+ //return i < arr.length && !func(arr[i])
+  //? (dropElements(arr.shift(i+1),func,i))
+   //:arr;
+   //}
    //above uses recursion to solve challenge
+   //didn't work with shift needed slice
