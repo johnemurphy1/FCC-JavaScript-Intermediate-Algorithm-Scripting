@@ -1,0 +1,23 @@
+function truthCheck(collection, pre) {
+  //pre will be an object property
+  let check = true;
+  for (let i = 0; i < collection.length; i+=1){
+  if(collection[i][pre]===undefined){
+    check = false;
+  }else if(collection[i][pre]===0){
+    check = false;
+  }else if(collection[i][pre]===null){
+    check = false;
+  }else if(collection[i][pre]===""){
+    check = false;
+  }else if (Number.isNaN(collection[i][pre])){
+    check = false;
+  }
+  //console.log(collection[i][pre]);
+//.length goes through array and objects in array
+}
+  
+  return check;
+}
+
+truthCheck([{"single": ""}, {"single": "double"}], "single");
