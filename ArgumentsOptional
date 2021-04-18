@@ -1,0 +1,58 @@
+//Create a function that sums two arguments together. If only one argument is provided, then return a function that expects one argument and returns the sum.
+function addTogether() {
+
+
+
+
+let a = arguments[0];
+
+
+if (arguments.length > 1){
+  
+    let b = arguments[1];
+    if(checkIfNum(a) !== undefined && checkIfNum(b) !== undefined){
+      return a + b;
+    }else {
+      return undefined;
+    }
+    
+    
+//function to check if only one argument
+}else if (arguments.length === 1){
+  let a = arguments[0];
+  let b = arguments[1];
+    if (checkIfNum(a) != undefined) {
+      function addB(b) {
+        // Check if the new argument is a number
+        
+        if (checkIfNum(b) != undefined) {
+          return a + b;
+        } else {
+          return undefined;
+        }
+      };
+      return addB;
+    } else {
+      return undefined;
+    }
+}
+//function that checks if an argument is a number or not
+function checkIfNum(argument){
+    if (typeof argument === "number"){
+        return argument;
+  }else{
+    return undefined;
+  }
+};
+}
+
+
+addTogether(5,"3");
+addTogether(2, 3) should return 5.
+addTogether(23, 30) should return 53.
+addTogether(5)(7) should return 12.
+addTogether("http://bit.ly/IqT6zt") should return undefined.
+addTogether(2, "3") should return undefined.
+addTogether(2)([3]) should return undefined.
+
+
