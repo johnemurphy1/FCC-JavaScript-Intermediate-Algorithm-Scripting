@@ -1,7 +1,7 @@
+//Run tests to see expected output for each method. Methods that take an argument must accept 1 argument and it has to be string. Methods must be only available means of interacting with object.
 var Person = function(firstAndLast) {
   //var fullName = firstAndLast;
-  // Only change code below this line
-  // Complete the method below and implement the others similarly
+  //create keys instead of regular functions
   this.getFullName = function() {
     return firstAndLast;
   };
@@ -27,3 +27,4 @@ var bob = new Person('Bob Ross');
 //bob.setFullName("Haskell Curry")
 
 //console.log(bob.getFullName());
+//must use six keys
